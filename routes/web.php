@@ -9,12 +9,13 @@ Route::get('/', function () {
 });
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [BookCrontoller::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 
 Route::get('register-book', [BookCrontoller::class, 'create'])->middleware('auth');
+Route::get('edit-book/{id}', [BookCrontoller::class, 'edit'])->middleware('auth');
+Route::post('edit-book/{id}', [BookCrontoller::class, 'update'])->middleware('auth');
+Route::delete('delete-book/{id}', [BookCrontoller::class, 'destroy'])->middleware('auth');
 
 Route::post('dashboard', [BookCrontoller::class, 'store']);
 
