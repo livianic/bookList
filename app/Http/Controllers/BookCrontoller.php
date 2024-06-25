@@ -13,7 +13,7 @@ class BookCrontoller extends Controller
      */
     public function index()
     {
-        $books = Book::where("id_user", Auth::user()->id)->paginate(100);
+        $books = Book::where("id_user", Auth::user()->id)->paginate(10);
         return view('dashboard', ['books' => $books]);
     }
 

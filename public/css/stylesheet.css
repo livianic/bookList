@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-family: 'Prompt', sans-serif;
+    font-size: 30px;
+    margin-bottom: 5px;
+    padding-left: 160px;
+}
+
+p{
+    font-family: 'Catamaran', sans-serif;
+    
+}
+a{
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+.box {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    row-gap: 20px;
+    column-gap: 40px;
+    margin-top: 40px; 
+    background-color: #4E6D4B;
+    color: #fff;
+    width: 700px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 1px #000000;
+    align-items: center;
+    margin-left: 260px;
+}
+.box-text{
+    margin-left: 50px;
+    width: 600px;
+    height: 300px;
+}
